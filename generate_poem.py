@@ -93,6 +93,6 @@ def free_verse():
     temp9 = "so " + lines[randint(266,352)]
     temp10 = "so " + lines[randint(266,352)] + "..."
 
-    temp11 = "and so " + lines[randint(266,352)] + "."
+    temp11 = "and so " + lines[randint(266,352)].rstrip() + "."
 
     return temp1 + temp2 + temp3 + temp4 + temp5 + temp6 + temp7 + temp8 + temp9 + temp10 + temp11
