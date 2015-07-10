@@ -9,7 +9,12 @@ urls = (
 class poem:        
   def GET(self):
     type = web.input().type
-    result = generate_poem.generate()
+    if type == 'Limerick':
+      result = generate_poem.limerick()
+    elif type == 'Free verse':
+      result = generate_poem.free_verse()
+    else:
+      return web.internalerror('Poem type not supported.')
     result = re.sub('\r?\n', '<br>', result)
     web.header('Content-Type', 'text/html');
     return result

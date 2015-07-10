@@ -1,6 +1,6 @@
 from random import randint
 
-def generate():
+def limerick():
   f = open("inputnew.txt")
   gender = 1
   pc = ''
@@ -75,3 +75,10 @@ def generate():
   else:
     line5 = "That " + templine1[3:].rstrip() + " that came from " + templine1_2[1:]
   return line1 + line2 + line3 + line4 + line5
+
+def free_verse():
+    f = open("inputnew.txt")
+    lines = f.readlines()
+    ans = ""
+    temp
+  
