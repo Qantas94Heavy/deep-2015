@@ -70,6 +70,8 @@ def generate():
   line3 += templine3
 
   line4 = lines[randint(88,100)]
-
-  line5 = "That " + templine1[1:].rstrip() + " that came from " + templine1_2[1:]
+  if templine1[1] == 'a' and templine[2] == 'n':
+    line5 = "That " + templine1[4:].rstrip() + " that came from " + templine1_2[1:]
+  else:
+    line5 = "That " + templine1[3:].rstrip() + " that came from " + templine1_2[1:]
   return line1 + line2 + line3 + line4 + line5
