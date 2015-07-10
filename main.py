@@ -2,7 +2,7 @@ import web, mimetypes, re, os
 import generate_poem
         
 urls = (
-  'poem', 'poem',
+  '/poem', 'poem',
   '/(.*)', 'other'
 )
 
@@ -10,7 +10,7 @@ class poem:
   def GET(self):
     type = web.input().type
     result = generate_poem.generate()
-    result = re.sub('\r?\n?', '<br>', result)
+    result = re.sub('\r?\n', '<br>', result)
     web.header('Content-Type', 'text/html');
     return result
     
