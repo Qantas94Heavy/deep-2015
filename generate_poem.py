@@ -77,8 +77,21 @@ def limerick():
   return line1 + line2 + line3 + line4 + line5
 
 def free_verse():
-    f = open("inputnew.txt")
+    f = open("inputfree.txt")
     lines = f.readlines()
-    ans = ""
-    temp
-  
+    temp1 = "I " + lines[randint(0,93)]
+    temp2 = "the " + lines[randint(94,265)]
+    temp3 = "that " + lines[randint(0,93)]
+    temp4 = "the " + lines[randint(94,265)]
+    
+    temp5 = "it will probably"
+    temp6 = lines[randint(0,93)] + " it"
+    temp7 = "for " + lines[randint(94,265)]
+    
+    temp8 = "they were " + lines[randint(266,352)]
+    temp9 = "sp " + lines[randint(266,352)]
+    temp10 = "and so " + lines[randint(266,352)] + "..."
+    
+    temp11 = "and so " + lines[randint(266,352)] + "."
+    
+    return temp1 + temp2 + temp3 + temp4 + temp5 + temp6 + temp7 + temp8 + temp9 + temp10 + temp11
