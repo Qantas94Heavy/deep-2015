@@ -1,8 +1,8 @@
-import web, mimetypes, re
+import web, mimetypes, re, os
 import generate_poem
         
 urls = (
-  'poem', 'poem'
+  'poem', 'poem',
   '/(.*)', 'other'
 )
 
@@ -16,13 +16,14 @@ class poem:
     
 class other:
   def GET(self, name):
-    path = os.normpath('/' + name).lstrip('/')
+    path = os.path.normpath('/' + name).lstrip('/')
     try:
       f = open(os.path.join('site', path))
       web.header('Content-Type', mimetypes.guess_type(path));
       return f.read()
     except:
       return web.notfound('Sorry, the file you were looking for was not found on this server.')
+  
   
 if __name__ == "__main__":
   app = web.application(urls, globals())
