@@ -22,6 +22,8 @@ class poem:
 class other:
   def GET(self, name):
     path = os.path.normpath('/' + name).lstrip('/')
+    if path == '':
+      path = 'index.html'
     try:
       f = open(os.path.join('site', path))
       web.header('Content-Type', mimetypes.guess_type(path));
