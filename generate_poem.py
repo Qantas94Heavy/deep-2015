@@ -1,3 +1,4 @@
+
 from random import randint
 
 def limerick():
@@ -9,7 +10,7 @@ def limerick():
   line1 = "There was "
   templine1 = lines[randint(0,25)]
   #templine1.rstrip()
-  
+
   if line1[0] == 'h':
     gender = 1
   elif line1[0] == 's':
@@ -69,7 +70,7 @@ def limerick():
   templine3 = lines[randint(75,86)]
   line3 += templine3
 
-  line4 = lines[randint(88,100)]
+  line4 = "and " + lines[randint(88,100)]
   if templine1[1] == 'a' and templine1[2] == 'n':
     line5 = "That " + templine1[4:].rstrip() + " that came from " + templine1_2[1:]
   else:
@@ -83,15 +84,15 @@ def free_verse():
     temp2 = "the " + lines[randint(94,265)]
     temp3 = "that " + lines[randint(0,93)]
     temp4 = "the " + lines[randint(94,265)]
-    
+
     temp5 = "it will probably\n"
-    temp6 = lines[randint(0,93)] + " it"
-    temp7 = "for " + lines[randint(94,265)]
-    
+    temp6 = lines[randint(0,93)].rstrip() + " it\n"
+    temp7 = "for the " + lines[randint(94,265)]
+
     temp8 = "they were " + lines[randint(266,352)]
     temp9 = "so " + lines[randint(266,352)]
-    temp10 = "and so " + lines[randint(266,352)] + "..."
-    
+    temp10 = "so " + lines[randint(266,352)] + "..."
+
     temp11 = "and so " + lines[randint(266,352)] + "."
-    
+
     return temp1 + temp2 + temp3 + temp4 + temp5 + temp6 + temp7 + temp8 + temp9 + temp10 + temp11
