@@ -84,12 +84,12 @@ def free_verse():
     temp3 = "that " + lines[randint(0,93)]
     temp4 = "the " + lines[randint(94,265)]
     
-    temp5 = "it will probably"
+    temp5 = "it will probably\n"
     temp6 = lines[randint(0,93)] + " it"
     temp7 = "for " + lines[randint(94,265)]
     
     temp8 = "they were " + lines[randint(266,352)]
-    temp9 = "sp " + lines[randint(266,352)]
+    temp9 = "so " + lines[randint(266,352)]
     temp10 = "and so " + lines[randint(266,352)] + "..."
     
     temp11 = "and so " + lines[randint(266,352)] + "."
